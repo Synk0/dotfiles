@@ -44,12 +44,12 @@ Softwares(){
     clear
     UpdateSystem
     read -n1 -r -p 'Pressione uma tecla para voltar '
-    iProgramas
+    Softwares
   elif [ "$VAR" = 2 ]; then
     clear
     Install numlockx vlc gimp unity-tweak-tool gdebi deborphan
     read -n1 -r -p 'Pressione uma tecla para voltar '
-    iProgramas
+    Softwares
   elif [ "$VAR" = 3 ]; then
     clear
     Remove totem* gnome-mahjongg gnome-mines gnome-sudoku aisleriot
@@ -58,7 +58,7 @@ Softwares(){
   elif [ "$VAR" = 0 ]; then
     menu
   else
-    iProgramas
+    Softwares
     sleep 2
   fi
 }
@@ -77,7 +77,7 @@ while [ $OPC -ne 3 ];do
 
   # Utilizando Case para selecionar a opcao desejada
   case $OPC in
-    1) iProgramas;;
+    1) Softwares;;
     0) break;;
     *) echo "Opção Inválida";;
   esac
