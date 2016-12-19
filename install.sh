@@ -13,22 +13,28 @@ Install () {
   sudo apt-get autoremove
 }
 
+Remove () {
+  sudo apt-get remove $1 -y
+  sudo apt-get autoremove
+}
+
 menu(){
   clear
   screenfetch
   echo "########### MENU ###########"
-  echo "# 1 - Atualizar e Instalar #"
+  echo "# 1 - Programas            #"
   echo "# 0 - Sair                 #"
   echo "############################"
   echo -n "Digite o número da opção: "
   read OPC
 }
 
-iProgramas(){
+Softwares(){
   clear
   echo "##########################"
   echo "#  1) Atualizar Sistema  #"
   echo "#  2) Instalar           #"
+  echo "#  3) Remover            #"
   echo "#  0) Voltar             #"
   echo "##########################"
   echo -n "Digite o número da opção: "
@@ -44,6 +50,11 @@ iProgramas(){
     Install numlockx vlc gimp unity-tweak-tool gdebi deborphan
     read -n1 -r -p 'Pressione uma tecla para voltar '
     iProgramas
+  elif [ "$VAR" = 3 ]; then
+    clear
+    Remove totem* gnome-mahjongg gnome-mines gnome-sudoku aisleriot
+    read -n1 -r -p 'Pressione uma tecla para voltar '
+    Softwares
   elif [ "$VAR" = 0 ]; then
     menu
   else
