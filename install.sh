@@ -43,17 +43,17 @@ Softwares(){
   if [ "$VAR" = 1 ]; then
     clear
     UpdateSystem
-    read -n1 -r -p 'Pressione uma tecla para voltar '
+    read -n1 -r -p 'Pressione uma tecla para voltar'
     Softwares
   elif [ "$VAR" = 2 ]; then
     clear
-    Install numlockx vlc gimp unity-tweak-tool gdebi deborphan
-    read -n1 -r -p 'Pressione uma tecla para voltar '
+    Install "numlockx vlc gimp unity-tweak-tool gdebi deborphan"
+    read -n1 -r -p 'Pressione uma tecla para voltar'
     Softwares
   elif [ "$VAR" = 3 ]; then
     clear
-    Remove totem* gnome-mahjongg gnome-mines gnome-sudoku aisleriot
-    read -n1 -r -p 'Pressione uma tecla para voltar '
+    Remove "totem* gnome-mahjongg gnome-mines gnome-sudoku aisleriot"
+    read -n1 -r -p 'Pressione uma tecla para voltar'
     Softwares
   elif [ "$VAR" = 0 ]; then
     menu
@@ -71,7 +71,7 @@ while [ $OPC -ne 3 ];do
     clear
     menu
   else
-    sudo apt-get install -y screenfetch xtitle
+    Install "screenfetch xtitle"
     menu
   fi
 
